@@ -4,6 +4,15 @@
   padding: 0;
 }
 
+:root{
+  --diameter:400px;
+  --cir-diameter: 100px;
+  --circular-line-width: 20px;
+  --background:rgb(250, 249, 182);
+  --line-color:#e72821;
+
+}
+
 header {
   background-image: url(image/header_bg.jpg);
   padding: 5px;
@@ -58,64 +67,98 @@ body {
   transform: rotate(15deg);
 }
 
-.circle-bar {
-  font-size: 200px;
-  width: 1em;
-  height: 1em;
+.skill{
+  height: 200px;
+  width: var(--diameter);
+}
+
+.circle{
   position: relative;
-  background-color: #333;
 }
 
-.circle-bar-left,
-.circle-bar-right {
-  width: 1em;
-  height: 1em;
-  background-color: #eee;
-}
-
-/* 這裡採用clip剪切了圓，實現左右兩個半圓，右半圓在後面，因此在更上一層， clip的用法參考：http://www.w3school.com.cn/cssref/pr_pos_clip.asp */
-.circle-bar-right {
-  clip: rect(0, auto, auto, .5em);
-}
-
-.circle-bar-left {
-  clip: rect(0, .5em, auto, 0);
-}
-
-.mask {
-  width: 0.8em;
-  height: 0.8em;
-  background-color: #fff;
-  text-align: center;
-  line-height: 0.2em;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.mask :first-child {
-  font-size: 0.3em;
-  height: 0.8em;
-  line-height: 0.8em;
-  display: block;
-}
-
-/*所有的後代都水平垂直居中，這樣就是同心圓了*/
-.circle-bar * {
+.out-circle{
   position: absolute;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  margin: auto;
+  height: var(--cir-diameter);
+  width: 100px;
+  border-radius: 50%;
+  background: var(--line-color);
 }
 
-/*自身以及子元素都是圓*/
-.circle-bar,
-.circle-bar>* {
+.in-circle{
+  position: absolute;
+  top: var(--circular-line-width);
+  left: var(--circular-line-width);
+  height: calc(var(--cir-diameter) - 2*var(--circular-line-width));
+  width: calc(var(--cir-diameter) - 2*var(--circular-line-width));
+  background: var(--background);
   border-radius: 50%;
 }
 
+.box{
+  position: absolute;
+  height: calc(var(--cir-diameter)/2);
+  width: calc(var(--cir-diameter)/2);
+  background: var(--background);
+}
+
+.box-top-left{
+  left: 0;
+  top: 0;
+  transform-origin: 100% 100%;
+  animation: top-left 1s linear forwards;
+}
+
+.box-top-right{
+  top: 0;
+  left: calc(var(--cir-diameter)/2);
+}
+
+.box-bottom-left{
+  left: 0;
+  top: calc(var(--cir-diameter)/2);
+  transform-origin: 100% 0;
+  animation: bottom-left 1s linear 1s forwards;
+}
+
+.box-bottom-right{
+  left: calc(var(--cir-diameter)/2);
+  top: calc(var(--cir-diameter)/2);
+}
+
+@keyframes top-left{
+  0%{
+    transform: skewX(0deg);
+  }
+  99.9%{
+    height: calc(var(--cir-diameter)/2);
+    width: calc(var(--cir-diameter)/2);
+  }
+  100%{
+    height: 0%;
+    width: 0%;
+    transform: skewX(90deg);
+  }
+}
+
+@keyframes bottom-left{
+  0%{
+    transform: skewX(0deg);
+  }
+  99.9%{
+    height: calc(var(--cir-diameter)/2);
+    width: calc(var(--cir-diameter)/2);
+  }
+  100%{
+    height: 0%;
+    width: 0%;
+    transform: skewY(-90deg);
+  }
+}
+
 .program {
-  width: 500px;
+  width: 450px;
   margin: 60px auto;
   margin: 20px 0;
 }
@@ -127,38 +170,38 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: 0 0 10px #af21e7b3;
+  box-shadow: 0 0 10px #218ee7b3;
 }
 
 .bar span {
   height: 2px;
   float: left;
-  background: #e72821;
+  background: #ffffff;
 }
 
 .c {
   width: 90%;
-  animation: c 2s;
+  animation: c 3s infinite;
 }
 
 .java {
   width: 85%;
-  animation: java 2s;
+  animation: java 3s infinite;
 }
 
 .js {
   width: 60%;
-  animation: js 2s;
+  animation: js 3s infinite;
 }
 
 .jsp {
   width: 80%;
-  animation: jsp 2s;
+  animation: jsp 3s infinite;
 }
 
 .py {
-  width: 60%;
-  animation: py 2s;
+  width: 40%;
+  animation: py 3s infinite;
 }
 
 @keyframes c {
