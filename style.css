@@ -10,12 +10,12 @@
   box-sizing: border-box;
 }
 
-:root{
-  --diameter:400px;
+:root {
+  --diameter: 400px;
   --cir-diameter: 100px;
   --circular-line-width: 20px;
-  --background:rgb(250, 249, 182);
-  --line-color:#e72821;
+  --background: rgb(250, 249, 182);
+  --line-color: #e72821;
 
 }
 
@@ -45,11 +45,12 @@ body {
 
 .right {
   float: right;
-  background-color: rgb(255, 255, 255);
+  background: #131F33;
   width: 65%;
   height: 1500px;
 }
 
+/* 頭貼 */
 .headshot {
   margin-left: 40%;
   margin-top: 10px;
@@ -73,7 +74,8 @@ body {
   transform: rotate(15deg);
 }
 
-.skill{
+/* 圓餅圖 */
+.skill {
   height: 200px;
   width: var(--diameter);
 }
@@ -81,6 +83,7 @@ body {
 .set-size {
   font-size: 6.4em;
 }
+
 .charts-container:after {
   clear: both;
   content: "";
@@ -94,9 +97,11 @@ body {
   margin: 15px;
   position: relative;
 }
+
 .pie-wrapper:nth-child(3n+1) {
   clear: both;
 }
+
 .pie-wrapper .pie {
   height: 100%;
   width: 100%;
@@ -105,6 +110,7 @@ body {
   position: absolute;
   top: 0;
 }
+
 .pie-wrapper .pie .half-circle {
   height: 100%;
   width: 100%;
@@ -115,6 +121,7 @@ body {
   position: absolute;
   top: 0;
 }
+
 .pie-wrapper .label {
   background: #34495e;
   border-radius: 50%;
@@ -130,34 +137,42 @@ body {
   text-align: center;
   top: 0.4em;
 }
+
 .pie-wrapper .label .smaller {
   color: #bdc3c7;
   font-size: .45em;
   padding-bottom: 20px;
   vertical-align: super;
 }
+
 .pie-wrapper .shadow {
   height: 100%;
   width: 100%;
   border: 0.1em solid #bdc3c7;
   border-radius: 50%;
 }
+
 .pie-wrapper.style-2 .label {
   background: none;
   color: #7f8c8d;
 }
+
 .pie-wrapper.style-2 .label .smaller {
   color: #bdc3c7;
 }
+
 .pie-wrapper.style-2 .label .smaller {
   color: #bdc3c7;
 }
+
 .pie-wrapper.progress-30 .pie .right-side {
   display: none;
 }
+
 .pie-wrapper.progress-30 .pie .half-circle {
   border-color: #3498db;
 }
+
 .pie-wrapper.progress-30 .pie .left-side {
   transform: rotate(108deg);
   animation: a30 3s infinite;
@@ -166,46 +181,54 @@ body {
 .pie-wrapper.progress-60 .pie .right-side {
   transform: rotate(180eg);
 }
+
 .pie-wrapper.progress-60 .pie .half-circle {
   border-color: #9b59b6;
 }
+
 .pie-wrapper.progress-60 .pie .left-side {
   transform: rotate(180eg);
   animation: a50 3s infinite;
 
 }
+
 .pie-wrapper.progress-90 .pie {
   clip: rect(auto, auto, auto, auto);
 }
+
 .pie-wrapper.progress-90 .pie .right-side {
   transform: rotate(180deg);
 }
+
 .pie-wrapper.progress-90 .pie .half-circle {
   border-color: #e67e22;
 }
+
 .pie-wrapper.progress-90 .pie .left-side {
   transform: rotate(324deg);
 }
 
-@keyframes a50{
-  0%{ 
-    transform:rotate(0deg);
+@keyframes a50 {
+  0% {
+    transform: rotate(0deg);
   }
-  100%{ 
-    transform:rotate(180deg);
+
+  100% {
+    transform: rotate(180deg);
   }
 }
 
-@keyframes a30{
-  0%{ 
-    transform:rotate(0deg);
+@keyframes a30 {
+  0% {
+    transform: rotate(0deg);
   }
-  100%{ 
-    transform:rotate(108deg);
+
+  100% {
+    transform: rotate(108deg);
   }
 }
 
-
+/* 長條圖 */
 .program {
   width: 450px;
   margin: 60px auto;
@@ -301,4 +324,66 @@ body {
   100% {
     width: 40%;
   }
+}
+
+/* 時間軸 */
+.timeline {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 360px;
+  border-left: 2px solid #ccc;
+  padding: 0 20px 0 30px;
+}
+
+.timebox {
+  background: #fff;
+  padding: 10%;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  line-height: 1.7;
+  position: relative;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.timebox:before {
+  margin-left: 3px;
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 3px solid #ddd;
+  position: absolute;
+  top: 10px;
+  left: -40px;
+}
+
+.timebox:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #ddd transparent transparent;
+  border-width: 8px;
+  position: absolute;
+  left: -17px;
+  top: 10px;
+}
+
+.timebox h2 {
+  margin: 0;
+  text-transform: uppercase;
+  font-family: merienda;
+}
+
+.timebox h3 {
+  margin: 0;
+  font-family: poppins;
+}
+
+.timebox h4 {
+  margin: 0;
+  font-family: poppins;
 }
