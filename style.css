@@ -422,19 +422,19 @@ pre{
 .timebox h4 {
   margin: 0;
   font-family: poppins;
-
 }
 
 .picture-container{
   width: 540px;
   height: 750px;
-  float: right;
+  float: left;
   justify-content: space-evenly;
   position: relative;
   align-items: center;
 }
 .picture{
-  position: absolute;
+  float: right;
+  position: relative;
   width: 250px;
   height: 150px;
   }
@@ -475,6 +475,10 @@ pre{
   transition: 500ms;
   opacity: 1;
   }
+
+ iframe{
+   margin-top: 30px;
+ } 
 
 footer{
   position: relative;
