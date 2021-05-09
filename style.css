@@ -40,16 +40,19 @@ body {
   float: left;
   background-color: rgb(250, 249, 182);
   width: 35%;
-  height: 1500px;
+  height: 1200px;
 }
 
 .right {
   float: right;
   background: #131F33;
   width: 65%;
-  height: 1500px;
+  height: 1200px;
 }
 
+.right h1{
+  color: white;
+}
 /* 頭貼 */
 .headshot {
   margin-left: 40%;
@@ -73,6 +76,11 @@ body {
 
 .social:hover {
   transform: rotate(15deg);
+}
+
+.intro p{
+  font-family: Microsoft JhengHei;
+  font-weight: bold;
 }
 
 /* 圓餅圖 */
@@ -361,6 +369,41 @@ pre{
   }
 }
 
+.life{
+  width: 200px;
+}
+@keyframes slide {
+  0% {
+      background: url('image/family.jpg') 0px 0px;
+  }
+  0% {
+    background: url('image') 0px 0px;
+  }
+  0% {
+    background: url('image/family.jpg') 0px 0px;
+  }
+  0% {
+    background: url('image') 0px 0px;
+  }
+  0% {
+    background: url('image') 0px 0px;
+  }
+  0% {
+    background: url('image') 0px 0px;
+  }
+  0% {
+    background: url('image') 0px 0px;
+  }
+  0% {
+    background: url('image') 0px 0px;
+  }
+  0% {
+    background: url('image') 0px 0px;
+  }
+  0% {
+    background: url('image') 0px 0px;
+  }
+}
 /* 時間軸 */
 .timeline {
   float: left;
@@ -433,7 +476,7 @@ pre{
   align-items: center;
 }
 .picture{
-  margin-top: 20px;
+  margin-top: 15px;
   float: right;
   position: relative;
   width: 250px;
@@ -475,6 +518,13 @@ pre{
   opacity: 1;
   }
 
+  .work ul li{
+    font-size: 18px;
+    margin-left: 10px;
+    color: white;
+  }
+
+  
 footer{
   position: relative;
   margin-top: -180px; /* negative value of footer height */
