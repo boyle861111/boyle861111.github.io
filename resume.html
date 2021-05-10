@@ -236,21 +236,21 @@
     </footer>
 
     <script>
-        var myIndex = 0;
-        carousel();
+        var album = 0;
+        change();
 
-        function carousel() {
+        function change() {
             var i;
             var x = document.getElementsByClassName("photo");
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
             }
-            myIndex++;
-            if (myIndex > x.length) {
-                myIndex = 1
+            album++;
+            if (album > x.length) {
+                album = 1
             }
-            x[myIndex - 1].style.display = "block";
-            setTimeout(carousel, 5000); // Change image every 5 seconds 1000ms = 1s
+            x[album - 1].style.display = "block";
+            setTimeout(change, 3000);
         }
     </script>
 </body>
