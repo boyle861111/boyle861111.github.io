@@ -40,14 +40,14 @@ body {
   float: left;
   background-color: rgb(250, 249, 182);
   width: 35%;
-  height: 1200px;
+  height: 1350px;
 }
 
 .right {
   float: right;
   background: #131F33;
   width: 65%;
-  height: 1200px;
+  height: 1350px;
 }
 
 .right h1 {
@@ -385,8 +385,8 @@ pre {
 .timeline {
   float: left;
   margin-left: 10px;
-  width: 360px;
-  height: 750PX;
+  width: 400px;
+  height: 875PX;
   border-left: 2px solid #ccc;
   padding: 0 20px 0 30px;
 }
@@ -398,7 +398,7 @@ pre {
   border: 1px solid #ccc;
   line-height: 1.7;
   position: relative;
-  height: 150px;
+  height: 210px;
   margin-bottom: 20px;
 }
 
@@ -445,8 +445,8 @@ pre {
 }
 
 .picture-container {
-  width: 540px;
-  height: 750px;
+  width: 750px;
+  height: 900px;
   float: left;
   justify-content: space-evenly;
   position: relative;
@@ -457,8 +457,8 @@ pre {
   margin-top: 15px;
   float: right;
   position: relative;
-  width: 250px;
-  height: 150px;
+  width: 350px;
+  height: 210px;
 }
 
 .pic {
