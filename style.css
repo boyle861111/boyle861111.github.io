@@ -40,14 +40,14 @@ body {
   float: left;
   background-color: rgb(250, 249, 182);
   width: 35%;
-  height: 1350px;
+  height: 1250px;
 }
 
 .right {
   float: right;
   background: #131F33;
   width: 65%;
-  height: 1350px;
+  height: 1250px;
 }
 
 .right h1 {
@@ -342,16 +342,6 @@ pre {
   }
 }
 
-@keyframes py {
-  0% {
-    width: 0;
-  }
-
-  100% {
-    width: 40%;
-  }
-}
-
 @keyframes html {
   0% {
     width: 0;
@@ -373,7 +363,8 @@ pre {
 }
 
 .life {
-  margin-left: 100px;
+  margin-left: 50px;
+  height: 10%;
 }
 
 .life img {
@@ -385,8 +376,8 @@ pre {
 .timeline {
   float: left;
   margin-left: 10px;
-  width: 400px;
-  height: 875PX;
+  width: 35%;
+  height: 780PX;
   border-left: 2px solid #ccc;
   padding: 0 20px 0 30px;
 }
@@ -398,7 +389,7 @@ pre {
   border: 1px solid #ccc;
   line-height: 1.7;
   position: relative;
-  height: 210px;
+  height: 175px;
   margin-bottom: 20px;
 }
 
@@ -445,8 +436,8 @@ pre {
 }
 
 .picture-container {
-  width: 750px;
-  height: 900px;
+  width: 60%;
+  height: 780px;
   float: left;
   justify-content: space-evenly;
   position: relative;
@@ -457,8 +448,8 @@ pre {
   margin-top: 15px;
   float: right;
   position: relative;
-  width: 350px;
-  height: 210px;
+  width: 50%;
+  height: 175px;
 } 
 
 .pic {
