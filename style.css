@@ -373,27 +373,12 @@ pre {
 }
 
 .life {
-  width: 300px;
-  height: 150px;
-  margin: 50px auto 0;
-  background-size: cover;
-  overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
-  animation: slide 20s infinite;
+  margin-left: 100px;
 }
 
-@keyframes slide {
-  0% {
-    background: url('image/family.jpg') no-repeat;
-  }
-
-  50% {
-    background: url('image/pcsh.jpg') no-repeat;
-  }
-
-  100% {
-    background: url('image/lala.jpg') no-repeat;
-  }
+.life img {
+  border: brown;
+  border-style: solid;
 }
 
 /* 時間軸 */

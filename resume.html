@@ -105,7 +105,18 @@
         </div>
         <div>
             <h1>Life photos</h1>
-            <div class="life"></div>
+            <div class="life">
+                <img class="photo" src="image/1.jpg" height="200px">
+                <img class="photo" src="image/2.jpg" height="200px">
+                <img class="photo" src="image/3.jpg" height="200px">
+                <img class="photo" src="image/4.jpg" height="200px">
+                <img class="photo" src="image/5.jpg" height="200px">
+                <img class="photo" src="image/6.jpg" height="200px">
+                <img class="photo" src="image/7.jpg" height="200px">
+                <img class="photo" src="image/8.jpg" height="200px">
+                <img class="photo" src="image/9.jpg" height="200px">
+                <img class="photo" src="image/10.jpg" height="200px">
+            </div>
         </div>
 
     </div>
@@ -226,11 +237,29 @@
         </center>
         <center><a href="https://www.facebook.com/boyle.duh"><img src="image/fb_icon.png" class="social"></a>
             <a href="https://instagram.com/boyle861111?r=nametag"><img src="image/Instagram-ICON.png"
-                    class="social"></a><a href="https://instagram.com/boyle861111?r=nametag"><img
-                    src="image/Gmail_Icon.png" class="social"></a><a href="https://https://github.com/boyle861111"><img
-                    src="image/github-icon.png" class="social"></a></center>
+                    class="social"></a><a href="mailto:boyle861111@gmail.com"><img src="image/Gmail_Icon.png"
+                    class="social"></a><a href="https://github.com/boyle861111"><img src="image/github-icon.png"
+                    class="social"></a></center>
     </footer>
 
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("photo");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {
+                myIndex = 1
+            }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 5000); // Change image every 5 seconds 1000ms = 1s
+        }
+    </script>
 </body>
 
 </html>
