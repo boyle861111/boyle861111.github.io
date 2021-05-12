@@ -88,7 +88,7 @@ body {
 /* 圓餅圖 */
 .skill {
   height: 200px;
-  width: var(--diameter);
+  width: 100%;
 }
 
 .set-size {
