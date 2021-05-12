@@ -93,6 +93,7 @@ body {
 
 .set-size {
   font-size: 6.4em;
+  width: 100%;
 }
 
 .charts-container:after {
