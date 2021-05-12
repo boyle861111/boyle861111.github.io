@@ -96,6 +96,7 @@ body {
 }
 
 .charts-container:after {
+  width: 100%;
   clear: both;
   content: "";
   display: table;
